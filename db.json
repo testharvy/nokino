@@ -1,0 +1,45 @@
+{
+  "films": [
+    { "id": "1", "title": "Ускорение", "franchise": "1", "year":  2000 },
+    { "id": "2", "title": "Двойное ускорение", "franchise": "1",  "year":  2002},
+    { "id": "3", "title": "Тройное ускорение", "franchise": "1",  "year":  2003},
+    { "id": "4", "title": "Невероятные приключения Джо", "franchise": "2",  "year":  2001 },
+    { "id": "5", "title": "Новые приключения Джо", "franchise": "2",  "year": 2003},
+    { "id": "6", "title": "Джо десять лет спустя", "franchise": "2",  "year": 2011},
+    { "id": "7", "title": "Бесконечное ускорение", "franchise": "1", "year": 2013},
+    { "id": "8", "title": "Годзилла и философский камень",  "franchise": null,  "year": 2001 },
+    { "id": "9", "title": "Фильм без названия",  "franchise": null,  "year": 2002 }
+  ],
+  "actors": [
+    { "id": "1", "name": "Вил Дроссель" },
+    { "id": "2", "name": "Уолт Полкер" },
+    { "id": "3", "name": "Мишель Рикардес" },
+    { "id": "4", "name": "Иосиф Джостав" },
+    { "id": "5", "name": "Леонид Брандо" },
+    { "id": "6", "name": "Борис Бучелатов" },
+    { "id": "7", "name": "Бенедикт Камбербэтч"}
+  ],
+  "relations": [
+    {"id":"1", "filmId": "1", "actorId":  "1"},
+    {"id":"2", "filmId": "1", "actorId":  "2"},
+    {"id":"3", "filmId": "1", "actorId":  "3"},
+    {"id":"4", "filmId": "2", "actorId":  "1"},
+    {"id":"5", "filmId": "2", "actorId":  "2"},
+    {"id":"6", "filmId": "3", "actorId":  "1"},
+    {"id":"7", "filmId": "3", "actorId":  "3"},
+    {"id":"8", "filmId": "4", "actorId":  "4"},
+    {"id":"9", "filmId": "4", "actorId":  "5"},
+    {"id":"12", "filmId": "5", "actorId":  "5"},
+    {"id":"13", "filmId": "5", "actorId":  "6"},
+    {"id":"14", "filmId": "6", "actorId":  "4"},
+    {"id":"15", "filmId": "6", "actorId":  "5"},
+    {"id":"16", "filmId": "6", "actorId":  "6"},
+    {"id":"17", "filmId": "7", "actorId":  "1"},
+    {"id":"18", "filmId": "7", "actorId":  "2"},
+    {"id":"19", "filmId": "7", "actorId":  "3"},
+    {"id":"20", "filmId": "7", "actorId":  "4"},
+    {"id":"21", "filmId": "8", "actorId":  "1"},
+    {"id":"22", "filmId": "8", "actorId":  "7"},
+    {"id":"23", "filmId": "9", "actorId":  "7"}
+  ]
+}
