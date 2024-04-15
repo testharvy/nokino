@@ -1,18 +1,17 @@
-
-import Link from "next/link";
-import {Actor} from "@/app/actors/types";
-import {getAllActors} from "@/app/actions/getAllActors";
+import {getAllActors} from "@/actions/getAllActors";
+import {Metadata} from "next";
+import ActorsList from "@/components/ActorsList/ActorsList";
 
 export default async function Actors() {
-    const actors = await getAllActors()
+    const actors = await getAllActors();
 
     return (
         <>
-            <h2>Список:</h2>
-            {actors.map((item:Actor)=>(<div key={item.id}>
-                    <Link href={`/actors/${item.id}`}>{item.name}</Link>
-                </div>
-            ))}
+            <ActorsList actors={actors}></ActorsList>
         </>
     )
+}
+
+export const metadata: Metadata = {
+    title: 'NoKino список актеров',
 }

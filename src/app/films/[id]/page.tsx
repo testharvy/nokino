@@ -1,8 +1,12 @@
 import Link from "next/link";
-import {getFilm} from "@/app/actions/getFilm";
-import {getFilmActors} from "@/app/actions/getFilmActors";
-import {getAllFilms} from "@/app/actions/getAllFilms";
-import {getFranchiseFilms} from "@/app/actions/getFranchiseFilms";
+import {Film} from "@/app/films/types";
+import {getFilm} from "@/actions/getFilm";
+import {getFilmActors} from "@/actions/getFilmActors";
+import {getAllFilms} from "@/actions/getAllFilms";
+import {getFranchiseFilms} from "@/actions/getFranchiseFilms";
+import ActorsList from "@/components/ActorsList/ActorsList";
+import {Col, Row, Space} from "antd";
+import MyImg from "@/components/MyImg/MyImg";
 
 type Props = {
     params: {
@@ -10,7 +14,7 @@ type Props = {
     };
 };
 
-export default async function Film ({params:{id}}: Props ) {
+export default async function FilmPage ({params:{id}}: Props ) {
     const film = await getFilm(id)
     const actors = await getFilmActors(id)
     let franchiseFilms;
@@ -19,26 +23,29 @@ export default async function Film ({params:{id}}: Props ) {
     }
 
     return (
-        <>
-            <h2>{film.title}</h2>
-            <br/>
-            <h3>Актеры</h3>
-            {actors.map((item)=>(<div key={item.id}>
-                    <Link href={`/actors/${item.id}`}>{item.name}</Link>
-                </div>
-            ))}
-            <br/>
-            {franchiseFilms &&
-                <>
-                    <h3>Другие фильмы серии:</h3>
-                    {franchiseFilms.map((item:Film)=>(<div key={item.id}>
-                        <Link href={`/films/${item.id}`}>{item.title}</Link>
-                        </div>))
-                    }
-                </>
-            }
-        </>
+        <Row>
+            <Col span={10} offset={1}>
+                <MyImg text={film.title}/>
+            </Col>
+            <Col span={12} offset={1}>
+                <Space direction="vertical" size="middle" style={{ display: 'flex' }}>
+                    <h2>{film.title} ({film.year})</h2>
 
+                    <h3>Актеры</h3>
+                    <ActorsList actors={actors}></ActorsList>
+                    <br/>
+                    {franchiseFilms &&
+                        <>
+                            <h3>Другие фильмы серии:</h3>
+                            {franchiseFilms.map((item:Film)=>(<div key={item.id}>
+                                <Link href={`/films/${item.id}`}>{item.title}</Link>
+                            </div>))
+                            }
+                        </>
+                    }
+                </Space>
+            </Col>
+        </Row>
     );
 }
 
@@ -48,4 +55,11 @@ export async function generateStaticParams() {
     return films.map((film) => ({
         id: film.id,
     }))
+}
+
+export async function generateMetadata({params:{id}}: Props) {
+    const film = await getFilm(id)
+    return {
+        title: `NoKino ${film.title}`,
+    }
 }

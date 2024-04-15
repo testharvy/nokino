@@ -1,4 +1,4 @@
-import Header from "@/components/header/header";
+import {Col, Row} from "antd";
 
 export default function LayoutHello({
                                        children,
@@ -6,10 +6,13 @@ export default function LayoutHello({
     children: React.ReactNode;
 }>) {
     return (
-<div>
-
-        <h1>Актёры</h1>
-        {children}
-</div>
+        <Row>
+            <Col span={4} offset={1}>
+                <h1>Актеры</h1>
+            </Col>
+            <Col span={16} offset={1}>
+                {children}
+            </Col>
+        </Row>
     );
 }

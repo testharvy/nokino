@@ -1,10 +1,11 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import {Col, Row} from "antd";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      Главная
-    </main>
+      <Row>
+          <Col span={4} >
+              <h1>Главная</h1>
+          </Col>
+      </Row>
   );
 }

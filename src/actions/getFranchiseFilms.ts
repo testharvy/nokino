@@ -4,10 +4,7 @@ export async function getFranchiseFilms(franchiseId:string, currentFilmId:string
     return fetch(`http://localhost:3001/films`).then(res=>{
         return res.json();
     }).then(res=>{
-
         return res.filter((item:Film)=>{
-            console.log('franchiseId',franchiseId)
-            console.log('currentFilmId',currentFilmId)
             if(currentFilmId == item.id){
                 return false
             }

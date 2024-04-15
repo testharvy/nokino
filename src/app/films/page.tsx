@@ -1,16 +1,26 @@
 import Link from "next/link";
 import {Film} from "@/app/films/types";
-import {getAllFilms} from "@/app/actions/getAllFilms";
+import {getAllFilms} from "@/actions/getAllFilms";
+import {Metadata} from "next";
+import { Col, Row } from 'antd';
+import FilmCard from "@/components/FilmCard/FilmCard";
 
 
 export default async function FilmsList() {
     const films = await getAllFilms()
+    return <>
+        <Row gutter={[24, 16]}>
+            {films.map((film:Film)=>(<Col span={8} key={film.id}>
+                    <Link href={`/films/${film.id}`}>
+                        <FilmCard id={film.id} title={film.title} year={film.year} franchise={film.franchise}/>
+                    </Link>
+                </Col>
+            ))}
+        </Row>
+    </>
 
-    return <div>
-        <h2>Список:</h2>
-        {films.map((item:Film)=>(<div key={item.id}>
-                <Link href={`/films/${item.id}`}>{item.title}</Link>
-            </div>
-        ))}
-    </div>
+}
+
+export const metadata: Metadata = {
+    title: 'NoKino список фильмов',
 }

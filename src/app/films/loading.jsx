@@ -1,5 +1,5 @@
 
-export default function LoadingHello() {
+export default function LoadingFilm() {
     return (
         <>
             loading...
