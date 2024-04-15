@@ -1,6 +1,6 @@
 # NoKino
 
-next.js, json-server
+next.js, json-server, ant design
 
 ## Запуск
 ### run json-server

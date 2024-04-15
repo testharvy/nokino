@@ -4,8 +4,12 @@ export interface Film {
     id: string
     title: string
     year: number
-    franchise: string|null
+    franchise: string|null,
+    tags: string[],
+    rate: number
 }
+
+export type FilmCardProps = Omit<Film, "id" | "franchise" | "tags" >;
 
 export interface FilmActor {
     id: string

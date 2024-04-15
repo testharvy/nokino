@@ -1,4 +1,3 @@
-import React from "react";
 import { Flex } from 'antd';
 import ActiveLink from "@/components/ActiveLink/ActiveLink";
 
@@ -13,6 +12,5 @@ export default function MyHeader (){
         <Flex gap="middle" justify="space-around" align="center">
             {LINKS.map((link) => <ActiveLink key={link.id} href={link.href} name={link.name}></ActiveLink>)}
         </Flex>
-
     );
 }

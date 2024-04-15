@@ -1,0 +1,20 @@
+const TEXTS = [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id donec ultrices tincidunt arcu. In dictum non consectetur a erat nam. Nec feugiat in fermentum posuere. In pellentesque massa placerat duis ultricies lacus sed. Venenatis cras sed felis eget velit aliquet. Lectus arcu bibendum at varius vel pharetra. Suspendisse ultrices gravida dictum fusce ut placerat orci. Facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Egestas quis ipsum suspendisse ultrices gravida dictum fusce ut. Morbi tincidunt augue interdum velit euismod. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget. Urna cursus eget nunc scelerisque. Viverra adipiscing at in tellus integer feugiat scelerisque. Tempor nec feugiat nisl pretium fusce. Mauris augue neque gravida in fermentum et sollicitudin ac orci. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a.",
+    "Bibendum ut tristique et egestas quis ipsum suspendisse ultrices gravida. Eget gravida cum sociis natoque. Convallis posuere morbi leo urna molestie. Aliquam id diam maecenas ultricies mi eget mauris pharetra. Ut porttitor leo a diam sollicitudin tempor id eu. Nunc mi ipsum faucibus vitae. Nunc sed id semper risus in hendrerit gravida rutrum. Senectus et netus et malesuada fames ac turpis egestas. At elementum eu facilisis sed odio morbi quis. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Quis blandit turpis cursus in hac habitasse platea dictumst.",
+    "Sagittis orci a scelerisque purus semper eget. Feugiat pretium nibh ipsum consequat nisl. Id aliquet lectus proin nibh nisl condimentum id venenatis a. Enim ut sem viverra aliquet eget sit amet. At lectus urna duis convallis convallis tellus id. Dignissim enim sit amet venenatis. Vulputate sapien nec sagittis aliquam malesuada bibendum. Feugiat in ante metus dictum at tempor commodo ullamcorper a. Viverra accumsan in nisl nisi scelerisque eu ultrices. Egestas quis ipsum suspendisse ultrices gravida. Lobortis feugiat vivamus at augue eget arcu. Pharetra convallis posuere morbi leo urna. Justo eget magna fermentum iaculis eu non.",
+    "Vitae congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Diam maecenas ultricies mi eget mauris. Nunc sed augue lacus viverra vitae congue eu consequat ac. Amet volutpat consequat mauris nunc. Eu turpis egestas pretium aenean. Vitae auctor eu augue ut lectus arcu bibendum. Sit amet justo donec enim diam vulputate. Tincidunt dui ut ornare lectus sit amet est. Bibendum enim facilisis gravida neque convallis a cras semper. Eros donec ac odio tempor. Mi proin sed libero enim sed faucibus. Sed vulputate odio ut enim blandit volutpat maecenas volutpat blandit. Turpis egestas sed tempus urna et pharetra pharetra.",
+    "Penatibus et magnis dis parturient montes nascetur ridiculus mus mauris. Sem fringilla ut morbi tincidunt. Amet justo donec enim diam vulputate. Commodo nulla facilisi nullam vehicula ipsum a. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae. Elementum pulvinar etiam non quam lacus suspendisse faucibus. Neque vitae tempus quam pellentesque nec. At in tellus integer feugiat scelerisque varius morbi enim. Bibendum enim facilisis gravida neque convallis a cras semper. Non blandit massa enim nec dui nunc mattis enim. Ornare quam viverra orci sagittis eu. Adipiscing bibendum est ultricies integer. Senectus et netus et malesuada. Adipiscing bibendum est ultricies integer quis auctor elit sed. A pellentesque sit amet porttitor eget dolor morbi non arcu. Nisl rhoncus mattis rhoncus urna neque viverra. Ut lectus arcu bibendum at varius vel pharetra vel turpis. Interdum posuere lorem ipsum dolor sit amet consectetur.",
+]
+
+type Props = {
+    number: number|string
+}
+
+export default function LoremIpsumText ({number = 1}:Props){
+    if(typeof number === 'string'){
+        number = parseInt(number)
+    }
+    const result = TEXTS[number%TEXTS.length - 1]
+
+    return  result;
+}

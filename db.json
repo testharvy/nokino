@@ -1,14 +1,14 @@
 {
   "films": [
-    { "id": "1", "title": "Ускорение", "franchise": "1", "year":  2000 },
-    { "id": "2", "title": "Двойное ускорение", "franchise": "1",  "year":  2002},
-    { "id": "3", "title": "Тройное ускорение", "franchise": "1",  "year":  2003},
-    { "id": "4", "title": "Невероятные приключения Джо", "franchise": "2",  "year":  2001 },
-    { "id": "5", "title": "Новые приключения Джо", "franchise": "2",  "year": 2003},
-    { "id": "6", "title": "Джо десять лет спустя", "franchise": "2",  "year": 2011},
-    { "id": "7", "title": "Бесконечное ускорение", "franchise": "1", "year": 2013},
-    { "id": "8", "title": "Годзилла и философский камень",  "franchise": null,  "year": 2001 },
-    { "id": "9", "title": "Фильм без названия",  "franchise": null,  "year": 2002 }
+    { "id": "1", "title": "Ускорение", "franchise": "1", "year":  2000, "tags": ["comedy"], "rate": 4.5 },
+    { "id": "2", "title": "Двойное ускорение", "franchise": "1",  "year":  2002,"tags": ["comedy"], "rate": 4},
+    { "id": "3", "title": "Тройное ускорение", "franchise": "1",  "year":  2003,"tags": ["comedy"], "rate": 3.5},
+    { "id": "4", "title": "Невероятные приключения Джо", "franchise": "2",  "year":  2001 ,"tags": ["drama"], "rate": 4},
+    { "id": "5", "title": "Новые приключения Джо", "franchise": "2",  "year": 2003, "tags": ["drama"], "rate": 4.1},
+    { "id": "6", "title": "Джо десять лет спустя", "franchise": "2",  "year": 2011, "tags": ["drama"],  "rate": 3.2},
+    { "id": "7", "title": "Бесконечное ускорение", "franchise": "1", "year": 2013, "tags": ["comedy", "scifi"], "rate": 2},
+    { "id": "8", "title": "Годзилла и философский камень",  "franchise": null, "year": 2001 , "tags": ["scifi"], "rate": 3.4},
+    { "id": "9", "title": "Фильм без названия",  "franchise": null, "year": 2002 , "tags": ["drama"], "rate": 0}
   ],
   "actors": [
     { "id": "1", "name": "Вил Дроссель" },

@@ -1,12 +1,12 @@
-import {Film} from "@/app/films/types";
 import Link from "next/link";
+import {Col, Row, Space} from "antd";
+
+import {Film} from "@/app/films/types";
 import {getActor} from "@/actions/getActor";
 import {getActorFilms} from "@/actions/getActorFilms";
 import {getAllActors} from "@/actions/getAllActors";
-import {getFilm} from "@/actions/getFilm";
-import {Col, Row, Space} from "antd";
-import ActorsList from "@/components/ActorsList/ActorsList";
 import MyImg from "@/components/MyImg/MyImg";
+
 
 type Props = {
     params: {
@@ -20,7 +20,7 @@ export default async function Page({params:{id}}: Props ) {
 
     return (
         <Row>
-            <Col span={10} offset={1}>
+            <Col span={10}>
                 <MyImg text={actor.name}/>
             </Col>
             <Col span={12} offset={1}>

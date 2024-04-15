@@ -1,5 +1,6 @@
-import {getAllActors} from "@/actions/getAllActors";
 import {Metadata} from "next";
+
+import {getAllActors} from "@/actions/getAllActors";
 import ActorsList from "@/components/ActorsList/ActorsList";
 
 export default async function Actors() {
