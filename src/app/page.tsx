@@ -1,6 +1,6 @@
 "use client"
 
-import FilterForm from "@/components/FilterForm/FilterForm";
+
 import {Col, Row, Typography} from "antd";
 import Title from 'antd/es/typography/Title'
 import Paragraph from 'antd/es/typography/Paragraph'
@@ -9,7 +9,7 @@ export default function Home() {
 
     return (
           <Row>
-              <Col span={6} >
+              <Col span={4} offset={1}>
                   <h1>Главная</h1>
               </Col>
               <Col span={16} offset={1}>

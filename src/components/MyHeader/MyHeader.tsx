@@ -3,8 +3,9 @@ import ActiveLink from "@/components/ActiveLink/ActiveLink";
 
 const LINKS = [
     {id: 1, href:"/", name:"Главная"},
-    {id: 2, href:"/films", name:"Фильмы"},
-    {id: 3, href:"/actors", name:"Актеры"},
+    {id: 2, href:"/search", name:"Поиск"},
+    {id: 3, href:"/films", name:"Фильмы"},
+    {id: 4, href:"/actors", name:"Актеры"},
 ]
 
 export default function MyHeader (){
