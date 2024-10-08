@@ -1,22 +1,22 @@
 {
   "films": [
-    { "id": "1", "title": "Ускорение", "franchise": "1", "year":  2000, "tags": ["comedy"], "rate": 4.5 },
-    { "id": "2", "title": "Двойное ускорение", "franchise": "1",  "year":  2002,"tags": ["comedy"], "rate": 4},
-    { "id": "3", "title": "Тройное ускорение", "franchise": "1",  "year":  2003,"tags": ["comedy"], "rate": 3.5},
-    { "id": "4", "title": "Невероятные приключения Джо", "franchise": "2",  "year":  2001 ,"tags": ["drama"], "rate": 4},
-    { "id": "5", "title": "Новые приключения Джо", "franchise": "2",  "year": 2003, "tags": ["drama"], "rate": 4.1},
-    { "id": "6", "title": "Джо десять лет спустя", "franchise": "2",  "year": 2011, "tags": ["drama"],  "rate": 3.2},
-    { "id": "7", "title": "Бесконечное ускорение", "franchise": "1", "year": 2013, "tags": ["comedy", "scifi"], "rate": 2},
-    { "id": "8", "title": "Годзилла и философский камень",  "franchise": null, "year": 2001 , "tags": ["scifi"], "rate": 3.4},
+    { "id": "1", "title": "Ускорение", "franchise": "1", "year":  2000, "tags": ["comedy"], "rate": 4.5, "img": "/film/f1.png" },
+    { "id": "2", "title": "Двойное ускорение", "franchise": "1",  "year":  2002,"tags": ["comedy"], "rate": 4, "img": "/film/f2.png"},
+    { "id": "3", "title": "Тройное ускорение", "franchise": "1",  "year":  2003,"tags": ["comedy"], "rate": 3.5, "img": "/film/f3.png"},
+    { "id": "4", "title": "Невероятные приключения Джо", "franchise": "2",  "year":  2001 ,"tags": ["drama"], "rate": 4, "img": "/film/jj1.png"},
+    { "id": "5", "title": "Новые приключения Джо", "franchise": "2",  "year": 2003, "tags": ["drama"], "rate": 4.1, "img": "/film/jj2.png"},
+    { "id": "6", "title": "Джо десять лет спустя", "franchise": "2",  "year": 2011, "tags": ["drama"],  "rate": 3.2, "img": "/film/jj3.png"},
+    { "id": "7", "title": "Бесконечное ускорение", "franchise": "1", "year": 2013, "tags": ["comedy", "scifi"], "rate": 2, "img": "/film/f4.png"},
+    { "id": "8", "title": "Годзилла и философский камень",  "franchise": null, "year": 2001 , "tags": ["scifi"], "rate": 3.4, "img": "/film/g.png"},
     { "id": "9", "title": "Фильм без названия",  "franchise": null, "year": 2002 , "tags": ["drama"], "rate": 0}
   ],
   "actors": [
-    { "id": "1", "name": "Вил Дроссель" },
-    { "id": "2", "name": "Уолт Полкер" },
-    { "id": "3", "name": "Мишель Рикардес" },
-    { "id": "4", "name": "Иосиф Джостав" },
-    { "id": "5", "name": "Леонид Брандо" },
-    { "id": "6", "name": "Борис Бучелатов" },
+    { "id": "1", "name": "Вил Дроссель" , "img": "/person/1.jpg" },
+    { "id": "2", "name": "Уолт Полкер" , "img": "/person/2.jpg" },
+    { "id": "3", "name": "Мишель Рикардес" , "img": "/person/3.jpg" },
+    { "id": "4", "name": "Иосиф Джостав" , "img": "/person/4.jpg" },
+    { "id": "5", "name": "Леонид Брандо" , "img": "/person/5.jpg" },
+    { "id": "6", "name": "Борис Бучелатов" , "img": "/person/6.jpg" },
     { "id": "7", "name": "Бенедикт Камбербэтч"}
   ],
   "relations": [

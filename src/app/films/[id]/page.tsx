@@ -37,7 +37,7 @@ export default async function FilmPage ({params:{id}}: Props ) {
             <Space direction="vertical" size="middle" style={{ display: 'flex' }}>
             <Row>
                 <Col span={10}>
-                    <MyImg text={film.title}/>
+                    <MyImg img={film.img? film.img: '/placeholder.jpg'}/>
                 </Col>
                 <Col span={12} offset={1}>
                     <Space direction="vertical" size="middle" style={{ display: 'flex' }}>
@@ -67,7 +67,7 @@ export default async function FilmPage ({params:{id}}: Props ) {
                         <Row gutter={[24, 16]}>
                             {franchiseFilms.map((film:Film)=>(<Col span={6} key={film.id}>
                                     <Link href={`/films/${film.id}`}>
-                                        <FilmCard title={film.title} year={film.year} rate={film.rate}/>
+                                        <FilmCard title={film.title} year={film.year} rate={film.rate} img={film.img}/>
                                     </Link>
                                 </Col>
                             ))}

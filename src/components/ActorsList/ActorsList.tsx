@@ -15,7 +15,15 @@ export default function ActorsList ({actors}:Props){
             dataSource={actors}
             renderItem={(actor) => (
                 <Item><Link href={`/actors/${actor.id}`}>
-                    <img style={{width:'30px',  height: '30px', border: '1px solid black', borderRadius: '50%', verticalAlign:'middle', marginRight: '10px'}} alt="foto" src="/person.png" />
+                    <img style={{
+                        width:'30px',
+                        height: '30px',
+                        border: '1px solid black',
+                        borderRadius: '50%',
+                        verticalAlign:'middle',
+                        marginRight: '10px'}}
+                         alt={actor.name}
+                         src={actor.img? actor.img: '/person.png'} />
                     <span style={{ verticalAlign:'middle'}}>{actor.name}</span>
                 </Link></Item>
             )}

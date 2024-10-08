@@ -13,7 +13,7 @@ export default async function FilmsList() {
         <Row gutter={[24, 16]}>
             {films.map((film:Film)=>(<Col span={8} key={film.id}>
                     <Link href={`/films/${film.id}`}>
-                        <FilmCard title={film.title} year={film.year} rate={film.rate}/>
+                        <FilmCard title={film.title} year={film.year} rate={film.rate} img={film.img}/>
                     </Link>
                 </Col>
             ))}
